@@ -1,4 +1,15 @@
 const mysql = require('mysql');
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const port = 4000;
+
+app.use(express.static('public'));
+app.use(bodyParser.json());
+
+app.listen(port, () => {
+    console.log(`App listening on port: ${port}`)
+});
 
 let connection = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -23,10 +34,11 @@ connection.connect((err) => {
     connection.query(createCadastrosTable, (err, results, fields) => {
         if (err) return console.log(err.message);
     });
+});
 
-    connection.end((err) => {
-        if (err) return console.error(err.message);
-        console.log('Close the database connection.');
-    })
+const cadastroRoute = require('./routes/api/cadastro')(connection);
+app.use('/api/cadastro', cadastroRoute);
+app.get('/', (req, res) => {
+    res.send('hello world');
 });
 
