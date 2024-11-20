@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Voz do Clima - Cadastro</title>
+</head>
+<body>
+<%- include('../partials/navigation.ejs') %>
+<main class="main__form">
+    <h1 class="form__header">Cadastro</h1>
+    <form action="" method="POST" class="form__container" id="cadastro">
+        <div class="form__item">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <small class="feedback"></small>
+        </div>
+        <div class="form__item">
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome" required>
+            <small class="feedback"></small>
+        </div>
+        <div class="form__item">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <small class="feedback"></small>
+        </div>
+        <div class="form__item">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <small class="feedback"></small>
+        </div>
+        <input type="submit" value="Cadastrar" class="btn__primary">
+    </form>
+</main>
+<%- include('../partials/footer.ejs') %>
+<script src="/javascript/script.js"></script>
+</body>
+</html>

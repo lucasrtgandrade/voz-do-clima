@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <%- include('partials/head.ejs') %>
+    <title>Voz do Clima</title>
+</head>
+<body>
+<%- include('partials/navigation.ejs') %>
+<main class="main">
+    <div class="hero__content">
+        <h1 class="hero__header">Sua cidade, seu clima, <span class="hero__header highlight">sua voz.</span></h1>
+        <p class="hero__body">Receba atualizações do tempo e faça a diferença com solicitações diretas à prefeitura.</p>
+        <button class="btn__primary">
+            <a class="btn__primary__link" href="/cadastrar">Cadastrar</a>
+        </button>
+    </div>
+    <img src="/images/hero__image.jpg" alt="uma garota protestando pelo clima" class="hero__image">
+</main>
+<aside class="aside__container">
+    <small class="aside__caption">Fique ligado</small>
+    <img class="aside__image" src="/images/aside__image.png" alt="foto do nascer do sol">
+    <div class="aside__container-content">
+        <div class="aside__container--large">
+            <h2 class="aside__header">Informações climáticas em tempo real</h2>
+        </div>
+        <div class="aside__container--large">
+            <p class="aside__body">Receba atualizações do tempo e faça a diferença com solicitações diretas à prefeitura.</p>
+            <button class="btn__secondary"><a class="btn__secondary__link" href="/pesquisa">Pesquisar Tempo</a></button>
+        </div>
+    </div>
+</aside>
+<%- include('partials/footer.ejs') %>
+</body>
+</html>

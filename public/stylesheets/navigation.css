@@ -1,0 +1,66 @@
+:root {
+    --primary-300: #FFA033;
+    --primary-500: #FB8500;
+    --primary-800: #E07800;
+    --support-200: rgba(255, 255, 255, 0.72);
+    --support-250: #FFFFFF;
+    --support-900: #131313;
+}
+
+.nav__main {
+    padding: 1rem 0;
+    background-color: var(--support-250);
+    border-bottom: 2px solid var(--support-900);
+}
+
+.nav__main-container {
+    display: flex;
+    max-width: 720px;
+}
+
+.menu {
+    display: flex;
+    gap: .5rem;
+}
+
+.menu__item {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.menu-link {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: .8rem;
+    color: var(--support-900);
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    border: 2px solid transparent;
+}
+
+.menu-link:hover {
+    border: 2px solid var(--support-900);
+    font-weight: 700;
+    border-radius: 2rem;
+}
+
+.primary-link {
+    background-color: var(--primary-500);
+    border: 2px solid var(--support-900);
+    border-radius: 2rem;
+}
+
+.primary-link:hover {
+    background-color: var(--primary-300);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.menu-link:active {
+    background-color: var(--primary-800);
+}

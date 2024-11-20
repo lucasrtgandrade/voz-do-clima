@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Voz do Clima - Tempo</title>
+</head>
+<body>
+<%- include('../partials/navigation.ejs') %>
+
+<main class="main__temp">
+    <h1 class="main__header">Pesquisar Temperatura</h1>
+    <fieldset class="fieldset__pesquisar">
+        <label for="city-input">Digite uma cidade:</label>
+        <input id="city-input" class="city-input" type="text">
+        <small class="feedback"></small>
+    </fieldset>
+    <div class="btn__container">
+        <button class="location-btn btn__secondary">Minha Localização</button>
+        <button id="search" class="btn__primary">Pesquisar</button>
+    </div>
+<!--OUTROS-->
+    <div class="weather-data">
+        <div class="current-weather">
+            <div class="details">
+            </div>
+        </div>
+        <div class="days-forecast">
+            <h2 class="aside__caption" >Próximos dias</h2>
+            <ul class="weather-cards">
+            </ul>
+        </div>
+    </div>
+</main>
+
+<script src="/javascript/pesquisa-temperatura.js"></script>
+
+<%- include('../partials/footer.ejs') %>
+</body>
+</html>

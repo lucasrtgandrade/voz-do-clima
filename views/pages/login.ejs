@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Voz do Clima - Login</title>
+</head>
+<body>
+<%- include('../partials/navigation.ejs') %>
+<main class="main__form">
+    <h1 class="form__header">Login</h1>
+    <form id="loginForm" class="form__container">
+        <div class="form__item">
+            <label for="email" class="form__label">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <small class="feedback"></small>
+        </div>
+        <div class="form__item">
+            <label for="senha">Password:</label>
+            <input type="password" id="senha" name="senha" required>
+            <small class="feedback"></small>
+        </div>
+        <button type="submit" class="btn__primary">Entrar</button>
+    </form>
+</main>
+<%- include('../partials/footer.ejs') %>
+<script src="javascript/login.js"></script>
+</body>
+</html>

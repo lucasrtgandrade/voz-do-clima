@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Solicitações</title>
+</head>
+<body>
+<%- include('../partials/navigation-user.ejs') %>
+<main class="main__form">
+    <h1 class="form__header">Serviços</h1>
+    <div id="feedbackMessage" class="feedbackMessage" style="display: none;">
+        <div class="solicitacao__info-container">
+            <img class="solicitacao__icone" src="/images/icon-check.svg">
+            <p class="solicitacao__header">solicitação enviada</p>
+        </div>
+    </div>
+    <div class="form__item">
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" class="input-option" placeholder="Digite o CEP">
+        <small  id="cep-error" class="feedback cep">Digite 8 dígitos</small>
+    </div>
+    <div class="form__item">
+        <label for="logradouro">Rua:</label>
+        <input type="text" id="logradouro" placeholder="Logradouro" disabled>
+    </div>
+    <div class="form__item--dupla">
+        <div class="form__item">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" placeholder="Bairro" disabled >
+        </div>
+        <div class="form__item">
+            <label for="numero">Número</label>
+            <input type="text" id="numero" placeholder="Digite o Número">
+            <small id="numero-error" class="feedback"></small>
+        </div>
+    </div>
+    <label for="serviço">Serviços</label>
+    <select id="serviço" class="input-option">
+        <option class="form__label">Escolha uma opção</option>
+        <option disabled>--> Meio Ambiente</option>
+        <option>Poda de árvore</option>
+        <option>Limpeza de córregos</option>
+        <option>Poluição do ar</option>
+        <option disabled>--> Lixo e Limpeza</option>
+        <option>Remoção de grandes objetos</option>
+        <option>Bueiros entupidos</option>
+        <option>Coleta Seletiva</option>
+        <option disabled>--> Cidadania</option>
+        <option>Altas temperaturas - Solicitar abordagem social a pessoa em situação de rua</option>
+        <option>Baixas temperaturas - Solicitar abordagem social a pessoa em situação de rua</option>
+    </select>
+    <div class="form__item">
+        <label>Descrição</label>
+        <textarea placeholder="Escreva uma breve descrição" class="input__text">
+        </textarea>
+    </div>
+    <button id="enviarSolicitacao" class="btn__primary" onclick="enviarSolicitacao()">Enviar</button>
+</main>
+
+<script src="javascript/pesquisa-cep.js"></script>
+<script src="javascript/validacao-numero.js"></script>
+<%- include('../partials/footer.ejs') %>
+</body>
+</html>

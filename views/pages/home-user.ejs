@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Bem Vindo!</title>
+</head>
+<body>
+<%- include('../partials/navigation-user.ejs') %>
+<main class="main__temp">
+    <h1 class="main__header" id="welcomeMessage"></h1>
+    <fieldset class="fieldset__pesquisar">
+        <label for="city-input">Pesquisar Temperatura:</label>
+        <input id="city-input" class="city-input" type="text">
+    </fieldset>
+    <div class="btn__container">
+        <button class="location-btn btn__secondary">Minha Localização</button>
+        <button id="search" class="btn__primary">Pesquisar</button>
+    </div>
+    <!--OUTROS-->
+    <div class="weather-data">
+        <div class="current-weather">
+            <div class="details">
+            </div>
+        </div>
+        <div class="days-forecast">
+            <h2 class="aside__caption" >Próximos dias</h2>
+            <ul class="weather-cards">
+            </ul>
+        </div>
+    </div>
+</main>
+
+<script src="javascript/pesquisa-temperatura.js"></script>
+
+<%- include('../partials/footer.ejs') %>
+<script src="javascript/welcome.js"></script>
+</body>
+</html>
